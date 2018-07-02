@@ -16,6 +16,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var p = 0;
+
+ function sleep(ms) {
+   return new Promise(resolve => setTimeout(resolve, ms));
+ }
+
+async function fx(x)
+{
+	var q = x.src;
+	var z = q.substr(q.length - 5);
+	if(z == "m.png"){
+		x.src = "img/plate.png";
+	p=p+1;
+	document.getElementById("result").innerHTML = "POINTS: " + p;
+}
+}
+
+async function disp() {
+	while (true) {
+		var pos = Math.floor((Math.random()*9));
+		document.getElementById(pos.toString()).src = "img/worm.png";
+		await sleep(5000);
+		document.getElementById(pos.toString()).src = "img/plate.png";
+	}
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
