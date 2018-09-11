@@ -19,7 +19,7 @@
 
 var p = 0;
 
- function sleep(ms) {
+function sleep(ms) {
    return new Promise(resolve => setTimeout(resolve, ms));
  }
 
@@ -38,9 +38,16 @@ async function disp() {
 	while (true) {
 		var pos = Math.floor((Math.random()*9));
 		document.getElementById(pos.toString()).src = "img/worm.png";
-		await sleep(5000);
+		s_time = 2000-p*50;
+		if(s_time<100)s_time=200;
+		await sleep(s_time);
 		document.getElementById(pos.toString()).src = "img/plate.png";
 	}
+}
+
+function show_credits()
+{
+	alert("Author: Konrad Kania \n konrad_kania@wp.pl");
 }
 
 var app = {

@@ -37,20 +37,20 @@
 
 <table class="centredb">
 <tbody>
-<tr>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="0"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="1"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="2"></td>
+<tr class="dropspace">
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="0"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="1"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="2"></td>
+</tr>
+<tr class="dropspace">
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="3"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="4"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="5"></td>
 </tr>
 <tr>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="3"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="4"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="5"></td>
-</tr>
-<tr>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="6"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="7"></td>
-<td><img width="42" height="42" src="img/plate.png" onclick="fx(this)" id="8"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="6"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="7"></td>
+<td><img class="hole" src="img/plate.png" onclick="fx(this)" id="8"></td>
 </tr>
 </tbody>
 </table>
@@ -58,8 +58,10 @@
 
             </div>
 	    <div id="control" class="centredb">
-		<button id="start" type="button" onclick="disp()">START</button>
 		<p id="result">POINTS: </p>
+		<br>
+		<button id="start" type="button" onclick="disp()">START</button>
+		<button id="credits" type="button" onclick="show_credits()">CREDITS</button>
 	    </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
