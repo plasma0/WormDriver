@@ -99,13 +99,13 @@ h1 {
 }
 
 .hole {
-	width: 16mm;
-	height: 16mm;
+	width: 28mm;
+	height: 28mm;
 
 }
 
 tr.dropspace>td {
-	padding-bottom: 16mm;
+	padding-bottom: 28mm;
 }
 
 #result {
