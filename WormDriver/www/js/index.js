@@ -30,7 +30,7 @@ async function fx(x)
 	if(z == "m.png"){
 		x.src = "img/plate.png";
 	p=p+1;
-	document.getElementById("result").innerHTML = "POINTS: " + p;
+	document.getElementById("results").innerHTML = "POINTS: " + p;
 }
 }
 

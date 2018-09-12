@@ -32,7 +32,7 @@
         <title>Worm Driver</title>
     </head>
     <body>
-            <h1>Smash all worms!</h1>
+            <h1 id="results">Smash all worms!</h1>
             <div id="mainhub" class="blink">
 
 <table class="centredb">
@@ -58,10 +58,9 @@
 
             </div>
 	    <div id="control" class="centredb">
-		<p id="result" style="font-size:12mm">POINTS: </p>
 		<br>
-		<button id="start" type="button" onclick="disp()">START</button>
-		<button id="credits" type="button" onclick="show_credits()">CREDITS</button>
+		<button class="butt" id="start" type="button" onclick="disp()">START</button>
+		<button class="butt" id="credits" type="button" style="text-align:right" onclick="show_credits()">CREDITS</button>
 	    </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

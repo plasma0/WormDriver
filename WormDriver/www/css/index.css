@@ -105,11 +105,17 @@ h1 {
 }
 
 tr.dropspace>td {
-	padding-bottom: 28mm;
+	padding-bottom: 18mm;
 }
 
 #result {
 	text-align: right;	
 	display: inline;
 	padding-right: 20%;
+}
+
+.butt{
+	background-color: #18AA1F;
+	border: none;
+	font-size: 6mm;	
 }
