@@ -117,5 +117,8 @@ tr.dropspace>td {
 .butt{
 	background-color: #18AA1F;
 	border: none;
-	font-size: 6mm;	
+	font-size: 6mm;
+	width: 40%;
+	border-radius: 5px;
+	border: 3px solid #663300;
 }

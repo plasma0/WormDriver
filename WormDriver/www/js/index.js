@@ -47,7 +47,7 @@ async function disp() {
 
 function show_credits()
 {
-	alert("Author: Konrad Kania \n konrad_kania@wp.pl");
+	alert("Author: Konrad Kania \nkonrad_kania@wp.pl");
 }
 
 var app = {
