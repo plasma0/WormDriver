@@ -81,6 +81,11 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+	admob.setOptions(
+	{publisherId:	"ca-app-pub-9400337818586168/1846702161"}
+	);
+	admob.createBannerView();
+	admob.requestInterstitialAd();
     },
 
     // Update DOM on a Received Event
