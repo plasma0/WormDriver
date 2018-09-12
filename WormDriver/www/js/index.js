@@ -18,6 +18,7 @@
  */
 
 var p = 0;
+var c = 3;
 
 function sleep(ms) {
    return new Promise(resolve => setTimeout(resolve, ms));
@@ -30,17 +31,35 @@ async function fx(x)
 	if(z == "m.png"){
 		x.src = "img/plate.png";
 	p=p+1;
-	document.getElementById("results").innerHTML = "POINTS: " + p;
+	document.getElementById("results").innerHTML = "<p class=\"points\">POINTS|" + p + "</p>" + "<p class=\"chances\">" + c + "|CHANCES</p>";
 }
 }
 
-async function disp() {
+async function disp(but) {
+	but.disabled = true;
+	document.getElementById("results").innerHTML = "<p class=\"points\">POINTS|" + p + "</p>" + "<p class=\"chances\">" + c + "|CHANCES</p>";
 	while (true) {
 		var pos = Math.floor((Math.random()*9));
 		document.getElementById(pos.toString()).src = "img/worm.png";
 		s_time = 2000-p*50;
 		if(s_time<100)s_time=200;
 		await sleep(s_time);
+		var state = document.getElementById(pos.toString()).src;
+		var s_ate = state.substr(state.length - 5);
+		if(s_ate=="m.png"){
+			c=c-1;
+			document.getElementById("results").innerHTML = "<p class=\"points\">POINTS|" + p + "</p>" + "<p class=\"chances\">" + c + "|CHANCES</p>";
+
+		}
+		if(c==0)
+		{
+			alert("GAME OVER\nYou socred "+p+" points.");
+			document.getElementById(pos.toString()).src = "img/plate.png";
+			document.getElementById("start").disabled = false;
+			p=0;
+			c=3;
+			break;
+		}
 		document.getElementById(pos.toString()).src = "img/plate.png";
 	}
 }
