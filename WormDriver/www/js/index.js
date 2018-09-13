@@ -86,6 +86,7 @@ var app = {
 	);
 	admob.createBannerView();
 	admob.requestInterstitialAd();
+	alert("xd");
     },
 
     // Update DOM on a Received Event
