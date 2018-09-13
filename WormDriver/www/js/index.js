@@ -69,38 +69,15 @@ function show_credits()
 	alert("Author: Konrad Kania \nkonrad_kania@wp.pl");
 }
 
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-    	document.removeEventListener('deviceready',onDeviceReady,false);
-        this.receivedEvent('deviceready');
-	alert("admob_set");
-	admob.setOptions(
-	{publisherId:	"ca-app-pub-9400337818586168/1846702161"}
-	);
-	admob.createBannerView();
+function onDeviceReady()
+{
+	document.removeEventListener('deviceready', onDeviceReady, false);
+	admob.setOptions({
+		publisherId:          "ca-app-pub-9400337818586168/1846702161"
+	});
+	admob.createBannerView();      
 	admob.requestInterstitialAd();
-    },
+	alert("EVERYTHING OK");
+}
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize();
+document.addEventListener("deviceready", onDeviceReady, false);
