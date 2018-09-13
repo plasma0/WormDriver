@@ -69,16 +69,6 @@ function show_credits()
 	alert("Author: Konrad Kania \nkonrad_kania@wp.pl");
 }
 
-function admob_init()
-{
-	admob.setOptions(
-	{publisherId:	"ca-app-pub-9400337818586168/1846702161"}
-	);
-	admob.createBannerView();
-	admob.requestInterstitialAd();
-
-}
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -91,6 +81,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+	alert("admob_set");
 	admob.setOptions(
 	{publisherId:	"ca-app-pub-9400337818586168/1846702161"}
 	);
@@ -112,4 +103,3 @@ var app = {
 };
 
 app.initialize();
-admob_init();
