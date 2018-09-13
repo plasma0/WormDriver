@@ -80,6 +80,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+    	document.removeEventListener('deviceready',onDeviceReady,false);
         this.receivedEvent('deviceready');
 	alert("admob_set");
 	admob.setOptions(
