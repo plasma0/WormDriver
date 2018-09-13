@@ -66,7 +66,7 @@ async function disp(but) {
 
 function show_credits()
 {
-	alert("Author: Konrad Kania \nkonrad_kania@wp.pl");
+	alert("Author: SimpleSoftwereStudio \njan.tymczasowy@pisz.to");
 }
 
 function onDeviceReady()
