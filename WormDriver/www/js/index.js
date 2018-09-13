@@ -75,9 +75,7 @@ function onDeviceReady()
 	admob.setOptions({
 		publisherId:          "ca-app-pub-9400337818586168/1846702161"
 	});
-	admob.createBannerView();      
-	admob.requestInterstitialAd();
-	alert("EVERYTHING OK");
+	admob.createBannerView();
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
