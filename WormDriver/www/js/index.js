@@ -76,6 +76,8 @@ function onDeviceReady()
 		publisherId:          "ca-app-pub-9400337818586168/1846702161"
 	});
 	admob.createBannerView();
+	document.getElementById("start").disabled = false;
+	document.getElementById("credits").disabled = false;
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
