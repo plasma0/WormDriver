@@ -41,7 +41,7 @@ async function disp(but) {
 	while (true) {
 		var pos = Math.floor((Math.random()*9));
 		document.getElementById(pos.toString()).src = "img/worm.png";
-		s_time = 2000-p*50;
+		s_time = 2000-p*15;
 		if(s_time<100)s_time=200;
 		await sleep(s_time);
 		var state = document.getElementById(pos.toString()).src;
